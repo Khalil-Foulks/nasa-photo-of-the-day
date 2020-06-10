@@ -9,13 +9,13 @@ import PictureInfo from './components/PictureContainer/PictureInfo'
 function App() {
   const BASE_URL = 'https://api.nasa.gov/planetary/apod'
   const API_KEY = 'DEMO_KEY'
-  const [nasaData, setNasaData] = useState()
+  const [nasaData, setNasaData] = useState({})
   console.log('1',nasaData)
 
   useEffect(() =>{
     axios.get(`${BASE_URL}/?api_key=${API_KEY}`)
     .then(res =>{
-      //debugger
+      debugger
       console.log(res)
       setNasaData(res.data)
       
