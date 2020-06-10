@@ -15,7 +15,7 @@ function App() {
   useEffect(() =>{
     axios.get(`${BASE_URL}/?api_key=${API_KEY}`)
     .then(res =>{
-      debugger
+      //debugger
       console.log(res)
       setNasaData(res.data)
       

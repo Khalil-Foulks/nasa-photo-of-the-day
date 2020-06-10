@@ -5,7 +5,17 @@ export default function PictureInfo(props) {
 
     return(
         <div className="pictureContainer" >
-            <div> Photographer: {props.picInfo.copyright}</div>
+            <div> 
+                <p>Photographer: {props.picInfo.copyright}</p>
+                <p>Captured on: {props.picInfo.date}</p>
+                <p>{props.picInfo.title}</p>
+            </div>
+            <img 
+                alt = {props.picInfo.title}
+                className = "picImage"
+                src= {props.picInfo.url}
+            />
+            <p>{props.picInfo.explanation}</p>
         </div>
     )
 }
